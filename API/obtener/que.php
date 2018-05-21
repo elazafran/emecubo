@@ -1,6 +1,6 @@
 <?php
 
-header('Content-Type: application/json;charset=utf-8');
+
 
 /*
 	$username = "root";
@@ -158,10 +158,20 @@ header('Content-Type: application/json;charset=utf-8');
     // }
     
     //Aunque el content-type no sea un problema en la mayoría de casos, es recomendable especificarlo
-header('Content-type: application/json; charset=UTF-8');
+    
+    //echo json_encode($jsondata);
+    //$todosLasEstaciones = preg_replace('/[ ]{2,}|[\t]/', ' ', trim($todosLasEstaciones));
+    
+// header('Content-type: application/json; charset=UTF-8');
+// echo json_encode( $todosLasEstaciones );
+// let myHeader = new Headers();
+// myHeader.append('Accept', 'application/json');
+// myHeader.append('Content-Type', 'application/json; charset=UTF-8');
+// myHeader.append('Access-Control-Allow-Origin', '*');
 
-//echo json_encode($jsondata);
-//$todosLasEstaciones = preg_replace('/[ ]{2,}|[\t]/', ' ', trim($todosLasEstaciones));
+
+header('Access-Control-Allow-Origin: *');
+header('Content-type: application/json');
 
 echo json_encode( $todosLasEstaciones );
 exit();

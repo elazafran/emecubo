@@ -14,11 +14,17 @@
     
 </head>
 <body>
+    
     <div class="container">
         <div class="row">
         
         <div class="col ml-auto">
         <?php
+            echo "asdfds";
+            $username = "dbo732013555";
+            $password = "Pa56word";
+            $hostname = "db732013555.db.1and1.com";
+            $dbname = "db732013555";
             include("conexion.php");
                             //(`fecha_medida`, `nombre`, `fechaconfigsensor`, `idsensor`, `tiposensor`, `marcasensor`, `modelosensor`, `idestacion`, `valor`) 
             //$fecha_medida= strftime("Hoy es %A y son las %H:%M");
@@ -32,22 +38,23 @@
             $idestacion= $_REQUEST ['idestacion'];
             $valor= $_REQUEST ['valor'];
              echo ''.$fecha_medida.','.$nombre.', '.$fechaconfigsensor.', '.$idsensor.','.$tiposensor.', '.$marcasensor.', '.$modelosensor.', '.$idestacion.', '.$valor.'<br>';
-             echo "('2018-05-01 02:05:32','sth1','2018-05-01 02:05:32','TH1',1,'AOSONG','DHT22','SCT2',20.000)";
+             //cho "('2018-05-01 02:05:32','sth1','2018-05-01 02:05:32','TH1',1,'AOSONG','DHT22','SCT2',20.000)";
 
              //echo "fecha =>".date('Y-m-d h:m:s');
             // echo "".$fecha_medida.",'".$nombre."', ".$fechaconfigsensor.", '".$idsensor."', ".$tiposensor.", '".$marcasensor."', '".$modelosensor."', '".$idestacion."', ".$valor.")";
-            $consulta="INSERT INTO medidasensor values('2018-05-01 02:05:32','sth1','2018-05-01 02:05:32','TH1',1,'AOSONG','DHT22','SCT2',20.000)";
+            //$consulta="INSERT INTO medidasensor values('2018-05-01 02:05:32','sth1','2018-05-01 02:05:32','TH1',1,'AOSONG','DHT22','SCT2',20.000)";
                        //"VALUES ('".$fecha_medida."','".$nombre."', '".$fechaconfigsensor."', '".$idsensor."', '".$tiposensor."', '".$marcasensor."', '".$modelosensor."', '".$idestacion."', '".$valor."')";
-            // insert into medidasensor values ('2018-05-01 01:05:23','sa23','2018-04-15 00:00:00','AN1','2','ANEMO KMS','MODELO - 1','STC1','20.')
+            $consulta= "insert into medidasensor values ('2018-05-03 01:05:25','sa23','2018-04-15 00:00:00','AN1',2,'ANEMO KMS','MODELO - 1','STC1',70)";
+
             //$consulta="INSERT INTO pruebas values('2018-05-01 02:05:32')";
             $connect = new mysqli($hostname, $username, $password, $dbname);
             $resultado=mysqli_query($connect,$consulta);
-            
+
             if ($resultado) {
                 echo "perfil almacenado. <br />";
             }
             else {
-                echo "error en la ejecución de la consulta. <br />";
+                echo "error en la ejecución de la consulta. <br /> =>>".$consulta;
             }
             
             if (mysqli_close($connect)){ 
