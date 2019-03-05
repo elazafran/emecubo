@@ -1,5 +1,5 @@
 # emecubo
-<img src="https://emecubo.extremepromotionsproject.xyz/images/logo.png" />
+<img src="https://emecubo.extremepromotionsproject.xyz/images/comofuncionaemecubo.png" />
 
 
 ## 1- obtener configuracion desde arduino, 3#T,H-4#V-6
