@@ -1,5 +1,5 @@
 # emecubo
-<img src="http://emecubo.extremepromotionsproject.xyz/API/img/estacionCompleta.jpg" />
+<img src="https://emecubo.extremepromotionsproject.xyz/images/logo.png" />
 
 
 ## 1- obtener configuracion desde arduino, 3#T,H-4#V-6
